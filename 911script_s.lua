@@ -26,7 +26,7 @@ RegisterCommand("911", function(source, args)
     
     PerformHttpRequest(Config.cadurl .. "/actions/911notification.php?get911=" .. callDetailsRequest,
         function(err, text, headers)
-            sendMsg(source, "Your 911 call has been received! The authorities are on their way!");
+            sendMsg(source, "Your 911 call has been received! A Unit is on their way!");
             sendToDisc("INCOMING TRANSMISSION:", table.concat(args, " "), "[" .. source .. "] " .. GetPlayerName(source))
         end)
 end)
